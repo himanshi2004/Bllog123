@@ -1,0 +1,57 @@
+<%- include('../../header.ejs') %>
+<section class="dashboard-wrap mtb-40">
+  <div class="container">
+    <div class="body-content">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="dash-left">
+            <ul>
+              <li class="active"><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="admin-blog-list.html" class="active">Blogs</a></li>
+              <li><a href="/admin/About/displayabout"> Display About</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1> View Contact</h1>
+              </div>
+              <div class="dash-nav">
+                <a href="/admin/contact/createcontact" class="btn btn-success"
+                  >Add About</a
+                >
+              </div>
+            </div>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+               <th>Message</th>
+                
+              </tr>
+           
+              <tr>
+                <td><%= data._id %></td>
+                <td><%= data.name %></td>
+                <td><%= data.email %></td>
+                <td><%= data.phone %></td>
+                <td><%= data.message %></td>
+                
+              </tr>
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../../footer.ejs') %>
